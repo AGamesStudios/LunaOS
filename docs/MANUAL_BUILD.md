@@ -7,10 +7,14 @@ with QEMU.
 ## Requirements
 - A Linux host with standard build tools (`gcc`, `make`, `wget`, etc.)
 - Root privileges to create device nodes
+- QEMU (`sudo apt-get install qemu-system-x86` on Debian-based systems)
 
 ## Steps
-1. Run `./scripts/manual_build.sh`. The script downloads kernel and BusyBox
-   sources, builds them and produces `initramfs.cpio.gz` under `manual_build/`.
+1. From the repository root execute:
+   ```bash
+   bash scripts/manual_build.sh
+   ```
+   The script downloads kernel and BusyBox sources, builds them and produces `initramfs.cpio.gz` under `manual_build/`.
 2. Boot the system with QEMU:
    ```bash
    qemu-system-x86_64 -kernel manual_build/linux/arch/x86/boot/bzImage \

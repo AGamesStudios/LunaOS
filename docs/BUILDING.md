@@ -4,10 +4,15 @@ This project provides a basic template to create your own Linux-based system usi
 
 ## Requirements
 - A Linux environment with `git` and standard build tools (gcc, make, etc.)
+- QEMU to run the resulting image (on Debian-based systems: `sudo apt-get install qemu-system-x86`)
 
 ## Quick Start
 
-Run `./scripts/build.sh` to clone Buildroot and build a minimal image. The script creates an `output` directory containing the bootable image and root filesystem.
+From the repository root run:
+```bash
+bash scripts/build.sh
+```
+The script clones Buildroot, builds a minimal image and creates an `output` directory containing the bootable kernel and root filesystem.
 
 You can test the image with QEMU:
 ```bash
