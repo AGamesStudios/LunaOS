@@ -8,8 +8,8 @@ fi
 
 cd buildroot
 
-# Use Buildroot's default x86_64 configuration
-make qemu_x86_64_defconfig
+# Use Buildroot's generic x86_64 configuration which produces a bootable ISO
+make x86_64_defconfig
 
 # Build the system
 make
@@ -18,9 +18,10 @@ make
 mkdir -p ../output
 cp output/images/bzImage ../output/
 cp output/images/rootfs.ext2 ../output/
+if [ -f output/images/rootfs.iso9660 ]; then
+    cp output/images/rootfs.iso9660 ../output/LunaOS.iso
+fi
 
 cd ..
 echo "Starting LunaOS under QEMU..."
-qemu-system-x86_64 -kernel output/bzImage \
-    -drive file=output/rootfs.ext2,format=raw,index=0,media=disk \
-    -append "root=/dev/sda console=ttyS0" -nographic
+bash scripts/run.sh

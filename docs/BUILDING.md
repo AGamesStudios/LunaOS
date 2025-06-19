@@ -15,11 +15,11 @@ From the repository root run:
 ```bash
 bash scripts/build.sh
 ```
-The script clones Buildroot, builds a minimal image and creates an `output` directory containing the bootable kernel and root filesystem.
+The script clones Buildroot, builds a minimal image and creates an `output` directory containing a kernel, a root filesystem and an ISO (`output/LunaOS.iso`). It then starts QEMU automatically.
 
-You can test the image with QEMU:
+You can later boot the ISO again with:
 ```bash
-qemu-system-x86_64 -kernel output/bzImage -drive file=output/rootfs.ext2,format=raw,index=0,media=disk -append "root=/dev/sda console=ttyS0" -nographic
+bash scripts/run.sh
 ```
 
 ## Customization

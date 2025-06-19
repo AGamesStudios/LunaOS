@@ -22,11 +22,10 @@ and execute the build script:
 bash scripts/build.sh
 ```
 
-After compilation, launch LunaOS with:
+The script automatically starts QEMU once the build completes. An ISO image is
+left in `output/LunaOS.iso` if you want to boot it manually later:
 ```bash
-qemu-system-x86_64 -kernel output/bzImage \
-    -drive file=output/rootfs.ext2,format=raw,index=0,media=disk \
-    -append "root=/dev/sda console=ttyS0" -nographic
+bash scripts/run.sh
 ```
 
 See [docs/BUILDING.md](docs/BUILDING.md) for details on customizing the build.
