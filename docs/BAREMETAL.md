@@ -8,11 +8,25 @@ It uses [GRUB](https://www.gnu.org/software/grub/) to load a tiny 32‑bit kerne
 - `qemu-system-i386` to run the ISO image
 
 ## Building
-From the repository root run:
+From the repository root run the following commands:
 ```bash
-bash scripts/baremetal_build.sh
+nasm -f elf32 baremetal/boot.asm -o baremetal/boot.o
+gcc -m32 -ffreestanding -c baremetal/kernel.c -o baremetal/kernel.o
+ld -m elf_i386 -T baremetal/linker.ld \
+    baremetal/boot.o baremetal/kernel.o -o baremetal/kernel.bin
+mkdir -p baremetal/iso/boot/grub
+cp baremetal/kernel.bin baremetal/iso/boot/
+cat > baremetal/iso/boot/grub/grub.cfg <<'EOF'
+set timeout=0
+set default=0
+menuentry "LunaOS Baremetal" {
+    multiboot2 /boot/kernel.bin
+    boot
+}
+EOF
+grub-mkrescue -o baremetal/LunaOS.iso baremetal/iso >/dev/null
 ```
-This produces `baremetal/LunaOS.iso` which can be booted with QEMU.
+This creates `baremetal/LunaOS.iso` which can be booted with QEMU.
 
 ## Running
 ```bash
