@@ -3,10 +3,9 @@
 This project provides a basic template to create your own Linux-based system using [Buildroot](https://buildroot.org/).
 
 ## Requirements
-- A Linux environment with `git` and standard build tools (gcc, make, etc.). On
-  Windows you can install [WSL](https://learn.microsoft.com/windows/wsl/) or set
-  up a Linux virtual machine (see [VM_SETUP.md](VM_SETUP.md)) to obtain a
-  suitable shell.
+- A Linux environment with `git` and standard build tools (gcc, make, etc.).
+  Windows users can install [WSL](https://learn.microsoft.com/windows/wsl/) or
+  run a Linux virtual machine.
 - QEMU to run the resulting image (on Debian-based systems:
   `sudo apt-get install qemu-system-x86`)
 
@@ -25,7 +24,5 @@ qemu-system-x86_64 -kernel output/bzImage -drive file=output/rootfs.ext2,format=
 
 ## Customization
 
-Modify the Buildroot configuration in `scripts/build.sh` to enable packages or adjust kernel options. Consult the Buildroot manual for additional features.
-
-For a step-by-step manual build process that compiles the kernel and BusyBox without Buildroot, see [MANUAL_BUILD.md](MANUAL_BUILD.md).
-If you want a tiny example that doesn't use Linux at all, refer to [BAREMETAL.md](BAREMETAL.md).
+Modify the Buildroot configuration in `scripts/build.sh` to enable packages or
+adjust kernel options. Consult the Buildroot manual for additional features.

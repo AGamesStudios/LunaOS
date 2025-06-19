@@ -18,3 +18,9 @@ make
 mkdir -p ../output
 cp output/images/bzImage ../output/
 cp output/images/rootfs.ext2 ../output/
+
+cd ..
+echo "Starting LunaOS under QEMU..."
+qemu-system-x86_64 -kernel output/bzImage \
+    -drive file=output/rootfs.ext2,format=raw,index=0,media=disk \
+    -append "root=/dev/sda console=ttyS0" -nographic
