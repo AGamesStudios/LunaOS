@@ -1,7 +1,7 @@
 # LunaOS
 
 LunaOS is a minimal Linux-based operating system template. This repository
-contains a script that downloads Buildroot, compiles a small kernel and root
+provides a script that downloads Buildroot, compiles a small kernel and root
 filesystem, and places the result in the `output` directory. The script expects
 a Linux environment. Windows users can install
 [WSL](https://learn.microsoft.com/windows/wsl/) or run a Linux virtual machine.
@@ -21,6 +21,10 @@ and execute the build script:
 ```bash
 bash scripts/build.sh
 ```
+The script clones Buildroot, configures it for QEMU using
+`qemu_x86_64_defconfig`, and builds a small system. Buildroot may take several
+minutes to finish. Once complete, the resulting kernel and filesystem are placed
+in the `output` directory.
 
 The script automatically starts QEMU once the build completes. An ISO image is
 left in `output/LunaOS.iso` if you want to boot it manually later:

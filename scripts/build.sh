@@ -8,8 +8,8 @@ fi
 
 cd buildroot
 
-# Use Buildroot's generic x86_64 configuration which produces a bootable ISO
-make x86_64_defconfig
+# Use Buildroot's QEMU-ready configuration
+make qemu_x86_64_defconfig
 
 # Build the system
 make
