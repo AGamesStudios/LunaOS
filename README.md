@@ -14,3 +14,5 @@ bash scripts/build.sh
 ```
 
 See [docs/BUILDING.md](docs/BUILDING.md) for the Buildroot-based method. If you prefer to compile everything manually, follow [docs/MANUAL_BUILD.md](docs/MANUAL_BUILD.md).
+For a tiny bare-metal example that does not use the Linux kernel, check
+[docs/BAREMETAL.md](docs/BAREMETAL.md).

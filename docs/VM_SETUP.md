@@ -41,3 +41,4 @@ qemu-system-x86_64 -kernel output/bzImage \
 ```
 
 You should see the system boot in the terminal. For manual kernel and BusyBox compilation, see [MANUAL_BUILD.md](MANUAL_BUILD.md).
+To try a tiny bare-metal demonstration instead of Linux, follow [BAREMETAL.md](BAREMETAL.md).

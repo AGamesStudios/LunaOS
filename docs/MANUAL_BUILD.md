@@ -25,3 +25,6 @@ with QEMU.
    ```
 
 When the virtual machine starts, you will be dropped into a BusyBox shell.
+
+For an even smaller proof‑of‑concept that skips the Linux kernel entirely,
+see [BAREMETAL.md](BAREMETAL.md).
