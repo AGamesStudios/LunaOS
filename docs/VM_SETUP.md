@@ -21,10 +21,11 @@ sudo apt-get update
 sudo apt-get install git build-essential qemu-system-x86 wget cpio
 ```
 
-Clone this repository in the VM:
+Clone this repository in the VM. Replace `<your_username>` with your GitHub
+account name or use the repository URL you forked from:
 
 ```bash
-git clone https://github.com/yourusername/LunaOS.git
+git clone https://github.com/<your_username>/LunaOS.git
 cd LunaOS
 ```
 
