@@ -17,3 +17,5 @@ qemu-system-x86_64 -kernel output/bzImage -drive file=output/rootfs.ext2,format=
 ## Customization
 
 Modify the Buildroot configuration in `scripts/build.sh` to enable packages or adjust kernel options. Consult the Buildroot manual for additional features.
+
+For a step-by-step manual build process that compiles the kernel and BusyBox without Buildroot, see [MANUAL_BUILD.md](MANUAL_BUILD.md).
