@@ -5,7 +5,9 @@ You will compile the kernel and BusyBox, assemble a minimal initramfs and run it
 with QEMU.
 
 ## Requirements
-- A Linux host with standard build tools (`gcc`, `make`, `wget`, etc.)
+- A Linux host with standard build tools (`gcc`, `make`, `wget`, etc.). Windows
+  users can install [WSL](https://learn.microsoft.com/windows/wsl/) to obtain a
+  Linux environment.
 - Root privileges to create device nodes
 - QEMU (`sudo apt-get install qemu-system-x86` on Debian-based systems)
 

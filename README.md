@@ -1,6 +1,10 @@
 # LunaOS
 
-LunaOS is a minimal Linux-based operating system template. This repository shows how to build a small custom distribution using Buildroot. It provides a simple script to fetch Buildroot, compile the kernel and root filesystem, and run it in QEMU.
+LunaOS is a minimal Linux-based operating system template. This repository shows
+how to build a small custom distribution using Buildroot. It provides a simple
+script to fetch Buildroot, compile the kernel and root filesystem, and run it in
+QEMU. The build scripts expect a Linux environment. Windows users should install
+[WSL](https://learn.microsoft.com/windows/wsl/) or use a Linux virtual machine.
 
 ## Usage
 Install QEMU (`sudo apt-get install qemu-system-x86` on Debian-based systems) and run the build script:

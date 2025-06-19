@@ -3,8 +3,11 @@
 This project provides a basic template to create your own Linux-based system using [Buildroot](https://buildroot.org/).
 
 ## Requirements
-- A Linux environment with `git` and standard build tools (gcc, make, etc.)
-- QEMU to run the resulting image (on Debian-based systems: `sudo apt-get install qemu-system-x86`)
+- A Linux environment with `git` and standard build tools (gcc, make, etc.). On
+  Windows you can install [WSL](https://learn.microsoft.com/windows/wsl/) to
+  obtain a suitable Linux shell.
+- QEMU to run the resulting image (on Debian-based systems:
+  `sudo apt-get install qemu-system-x86`)
 
 ## Quick Start
 
