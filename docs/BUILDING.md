@@ -4,8 +4,9 @@ This project provides a basic template to create your own Linux-based system usi
 
 ## Requirements
 - A Linux environment with `git` and standard build tools (gcc, make, etc.). On
-  Windows you can install [WSL](https://learn.microsoft.com/windows/wsl/) to
-  obtain a suitable Linux shell.
+  Windows you can install [WSL](https://learn.microsoft.com/windows/wsl/) or set
+  up a Linux virtual machine (see [VM_SETUP.md](VM_SETUP.md)) to obtain a
+  suitable shell.
 - QEMU to run the resulting image (on Debian-based systems:
   `sudo apt-get install qemu-system-x86`)
 

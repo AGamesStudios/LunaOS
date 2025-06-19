@@ -6,7 +6,8 @@ with QEMU.
 
 ## Requirements
 - A Linux host with standard build tools (`gcc`, `make`, `wget`, etc.). Windows
-  users can install [WSL](https://learn.microsoft.com/windows/wsl/) to obtain a
+  users can install [WSL](https://learn.microsoft.com/windows/wsl/) or build
+  inside a Linux virtual machine (see [VM_SETUP.md](VM_SETUP.md)) to obtain a
   Linux environment.
 - Root privileges to create device nodes
 - QEMU (`sudo apt-get install qemu-system-x86` on Debian-based systems)
